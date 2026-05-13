@@ -51,6 +51,7 @@ jobs:
           cmake --build build --config Release --target pjarczak_bambu_linux_host
           bash tools/pjarczak_bambu_linux_host/package_linux_host_runtime.sh build
           tar -czvf linux_host_runtime_${{ github.sha }}.tar.gz -C tools/pjarczak_bambu_linux_host/runtime linux-x86_64
+          overwrite: true
 
       - name: Upload linux host runtime artifact
         uses: actions/upload-artifact@v7
