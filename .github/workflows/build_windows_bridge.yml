@@ -66,6 +66,7 @@ jobs:
           name: linux_host_runtime_${{ github.sha }}
           path: ./linux_host_runtime_${{ github.sha }}.tar.gz
           if-no-files-found: error
+          overwrite: true
 
       - name: Upload WSL rootfs artifact
         uses: actions/upload-artifact@v7
